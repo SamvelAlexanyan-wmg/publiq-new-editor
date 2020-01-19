@@ -1,7 +1,7 @@
 import Plugin from '@ckeditor/ckeditor5-build-balloon-block';
 import ButtonView from '@ckeditor/ckeditor5-ui/src/button/buttonview';
 
-export class InsertImage extends Plugin {
+export default class InsertImage extends Plugin {
 	init() {
 		this.ui.componentFactory.add( 'insertImage', locale => {
 			const view = new ButtonView( locale );
