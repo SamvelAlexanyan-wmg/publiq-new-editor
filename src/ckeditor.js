@@ -32,6 +32,7 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 
 import '../theme/theme.css';
+import { InsertImage } from './custom_plugins/test';
 
 export default class BalloonEditor extends BalloonEditorBase {}
 
@@ -59,7 +60,8 @@ BalloonEditor.builtinPlugins = [
 	Paragraph,
 	PasteFromOffice,
 	Table,
-	TableToolbar
+	TableToolbar,
+	InsertImage
 ];
 
 // Editor configuration.
@@ -79,7 +81,8 @@ BalloonEditor.defaultConfig = {
 		'mediaEmbed',
 		'|',
 		'undo',
-		'redo'
+		'redo',
+		'insertImage'
 	],
 	toolbar: {
 		items: [
