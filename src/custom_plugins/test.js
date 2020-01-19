@@ -3,7 +3,8 @@ import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 
 export default class InsertImage extends Plugin {
 	init() {
-		this.ui.componentFactory.add( 'insertImage', locale => {
+		const editor = this.editor;
+		editor.ui.componentFactory.add( 'insertImage', locale => {
 			const view = new ButtonView( locale );
 
 			view.set( {
@@ -38,13 +39,13 @@ export default class InsertImage extends Plugin {
 				// eslint-disable-next-line no-undef,no-alert
 				const imageUrl = prompt( 'Image URL' );
 
-				this.model.change( writer => {
+				editor.model.change( writer => {
 					const imageElement = writer.createElement( 'image', {
 						src: imageUrl
 					} );
 
 					// Insert the image in the current selection location.
-					this.model.insertContent( imageElement, this.model.document.selection );
+					editor.model.insertContent( imageElement, editor.model.document.selection );
 				} );
 			} );
 			view.render();
