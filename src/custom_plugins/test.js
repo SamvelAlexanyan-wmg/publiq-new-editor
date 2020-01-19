@@ -1,5 +1,5 @@
-import Plugin from '@ckeditor/ckeditor5-build-balloon-block';
 import ButtonView from '@ckeditor/ckeditor5-ui/src/button/buttonview';
+import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 
 export default class InsertImage extends Plugin {
 	init() {
