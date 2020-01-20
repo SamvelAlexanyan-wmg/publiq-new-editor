@@ -51,10 +51,26 @@ module.exports = {
 			language: 'en',
 			additionalLanguages: 'all'
 		} ),
-		new webpack.BannerPlugin( {
-			banner: bundler.getLicenseBanner(),
-			raw: true
-		} )
+		// new webpack.BannerPlugin( {
+		// 	banner: bundler.getLicenseBanner(),
+		// 	raw: true
+		// } ),
+		// new webpack.NormalModuleReplacementPlugin(
+		// 	/bold\.svg/,
+		// 	'../../../../../src/custom/icons/Bold.svg'
+		// ),
+		// new webpack.NormalModuleReplacementPlugin(
+		// 	/italic\.svg/,
+		// 	'../../../../../src/custom/icons/Italic.svg'
+		// ),
+		// new webpack.NormalModuleReplacementPlugin(
+		// 	/link\.svg/,
+		// 	'../../../../../src/custom/icons/Link.svg'
+		// ),
+		// new webpack.NormalModuleReplacementPlugin(
+		// 	/media\.svg/,
+		// 	'../../../../src/custom/icons/Video.svg'
+		// )
 	],
 
 	module: {

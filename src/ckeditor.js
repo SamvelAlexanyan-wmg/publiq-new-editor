@@ -30,7 +30,9 @@ import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
-import InsertImage from './custom_plugins/test';
+import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter';
+import InsertImage from './custom/plugins/test';
+
 import '../theme/theme.css';
 
 export default class BalloonEditor extends BalloonEditorBase {}
@@ -38,6 +40,7 @@ export default class BalloonEditor extends BalloonEditorBase {}
 // Plugins to include in the build.
 BalloonEditor.builtinPlugins = [
 	Essentials,
+	SimpleUploadAdapter,
 	UploadAdapter,
 	Autoformat,
 	BlockToolbar,
@@ -89,6 +92,11 @@ BalloonEditor.defaultConfig = {
 			'italic',
 			'link'
 		]
+	},
+	simpleUpload: {
+		// configure your url and headers here
+		// uploadUrl : 'example.com',
+		// headers: { token: 'some token'}
 	},
 	image: {
 		toolbar: [
