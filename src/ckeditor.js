@@ -39,6 +39,7 @@ export default class BalloonEditor extends BalloonEditorBase {}
 
 // Plugins to include in the build.
 BalloonEditor.builtinPlugins = [
+	SimpleUploadAdapter,
 	Essentials,
 	UploadAdapter,
 	Autoformat,
@@ -121,7 +122,7 @@ BalloonEditor.defaultConfig = {
 	},
 	simpleUpload: {
 		// configure your url and headers here
-		// uploadUrl : 'example.com',
+		uploadUrl: 'https://stage-mainnet-state.publiq.network/api/file/upload',
 		// headers: { token: 'some token'}
 	},
 	image: {
