@@ -40,7 +40,6 @@ export default class BalloonEditor extends BalloonEditorBase {}
 // Plugins to include in the build.
 BalloonEditor.builtinPlugins = [
 	Essentials,
-	SimpleUploadAdapter,
 	UploadAdapter,
 	Autoformat,
 	BlockToolbar,
@@ -68,6 +67,33 @@ BalloonEditor.builtinPlugins = [
 
 // Editor configuration.
 BalloonEditor.defaultConfig = {
+	plugins: [
+		SimpleUploadAdapter,
+		Essentials,
+		UploadAdapter,
+		Autoformat,
+		BlockToolbar,
+		Bold,
+		Italic,
+		BlockQuote,
+		CKFinder,
+		EasyImage,
+		Heading,
+		Image,
+		ImageCaption,
+		ImageStyle,
+		ImageToolbar,
+		ImageUpload,
+		Indent,
+		Link,
+		List,
+		MediaEmbed,
+		Paragraph,
+		PasteFromOffice,
+		Table,
+		TableToolbar,
+		InsertImage
+	],
 	blockToolbar: [
 		'heading',
 		'|',
