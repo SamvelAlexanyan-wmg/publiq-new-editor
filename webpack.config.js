@@ -8,8 +8,8 @@
 /* eslint-env node */
 
 const path = require( 'path' );
-const webpack = require( 'webpack' );
-const { bundler, styles } = require( '@ckeditor/ckeditor5-dev-utils' );
+// const webpack = require( 'webpack' );
+const { styles } = require( '@ckeditor/ckeditor5-dev-utils' );
 const CKEditorWebpackPlugin = require( '@ckeditor/ckeditor5-dev-webpack-plugin' );
 const TerserPlugin = require( 'terser-webpack-plugin' );
 
