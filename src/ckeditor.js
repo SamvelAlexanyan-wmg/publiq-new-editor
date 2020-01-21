@@ -32,7 +32,7 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter';
 import InsertImage from './custom/plugins/test';
-
+import Enter from '@ckeditor/ckeditor5-enter/src/enter';
 import '../theme/theme.css';
 
 export default class BalloonEditor extends BalloonEditorBase {}
@@ -40,6 +40,7 @@ export default class BalloonEditor extends BalloonEditorBase {}
 // Plugins to include in the build.
 BalloonEditor.builtinPlugins = [
 	SimpleUploadAdapter,
+	Enter,
 	Essentials,
 	UploadAdapter,
 	Autoformat,
@@ -68,33 +69,6 @@ BalloonEditor.builtinPlugins = [
 
 // Editor configuration.
 BalloonEditor.defaultConfig = {
-	plugins: [
-		SimpleUploadAdapter,
-		Essentials,
-		UploadAdapter,
-		Autoformat,
-		BlockToolbar,
-		Bold,
-		Italic,
-		BlockQuote,
-		CKFinder,
-		EasyImage,
-		Heading,
-		Image,
-		ImageCaption,
-		ImageStyle,
-		ImageToolbar,
-		ImageUpload,
-		Indent,
-		Link,
-		List,
-		MediaEmbed,
-		Paragraph,
-		PasteFromOffice,
-		Table,
-		TableToolbar,
-		InsertImage
-	],
 	blockToolbar: [
 		'heading',
 		'|',
@@ -120,17 +94,15 @@ BalloonEditor.defaultConfig = {
 			'link'
 		]
 	},
-	simpleUpload: {
-		// configure your url and headers here
-		uploadUrl: 'https://stage-mainnet-state.publiq.network/api/file/upload',
-		// headers: { token: 'some token'}
-	},
 	image: {
-		toolbar: [
-			'imageStyle:full',
-			'imageStyle:side',
-			'|',
-			'imageTextAlternative'
+		toolbar: [ 'imageResize', 'imageTextAlternative', '|', 'imageStyle:alignCenter', 'imageStyle:full', 'imageStyle:side' ],
+
+		styles: [
+			'full',
+			'side',
+			'alignLeft',
+			'alignCenter',
+			'alignRight'
 		]
 	},
 	table: {
